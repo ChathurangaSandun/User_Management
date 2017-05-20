@@ -17,11 +17,6 @@ namespace UserManagmentModule.Api.Controller
         [HttpGet]
         public List<string> GetActiveComponentsFromScreen(string screenName)
         {
-
-            if (string.IsNullOrEmpty(screenName))
-            {
-                return null;
-            }
             return ScreenComponentManager.GetActiveComponentsByScreenName(screenName);
         }
 
