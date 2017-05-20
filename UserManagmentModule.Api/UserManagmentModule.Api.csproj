@@ -110,10 +110,13 @@
     <Compile Include="App_Start\JsonContentNegotiator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controller\CustomController.cs" />
+    <Compile Include="Controller\ScreenComponentController.cs" />
+    <Compile Include="Controller\ScreenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Manages\CustomManager.cs" />
+    <Compile Include="Manages\ScreenComponentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
