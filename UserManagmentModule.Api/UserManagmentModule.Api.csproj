@@ -112,11 +112,15 @@
     <Compile Include="Controller\CustomController.cs" />
     <Compile Include="Controller\ScreenComponentController.cs" />
     <Compile Include="Controller\ScreenController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Manages\CustomManager.cs" />
     <Compile Include="Manages\ScreenComponentManager.cs" />
+    <Compile Include="Manages\UserManager.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserLoginDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
