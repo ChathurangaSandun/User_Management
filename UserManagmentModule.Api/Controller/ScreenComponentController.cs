@@ -12,8 +12,7 @@ namespace UserManagmentModule.Api.Controller
     [RoutePrefix("api/ScreenComponent")]
     public class ScreenComponentController : ApiController
     {
-
-
+         
         [Route("GetActiveComponents/{screenName}")]
         [HttpGet]
         public List<string> GetActiveComponentsFromScreen(string screenName)
