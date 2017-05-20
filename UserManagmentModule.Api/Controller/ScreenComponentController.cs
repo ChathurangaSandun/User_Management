@@ -14,11 +14,15 @@ namespace UserManagmentModule.Api.Controller
     {
 
 
-        [Route("{screenName}")]
+        [Route("GetActiveComponents/{screenName}")]
         [HttpGet]
         public List<string> GetActiveComponentsFromScreen(string screenName)
-
         {
+
+            if (string.IsNullOrEmpty(screenName))
+            {
+                return null;
+            }
             return ScreenComponentManager.GetActiveComponentsByScreenName(screenName);
         }
 
