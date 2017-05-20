@@ -17,7 +17,7 @@ namespace UserManagmentModule.Api.Manages
             //_connection.Open();
 
             Dictionary<int, string> screens = new Dictionary<int, string>();
-            using (IDataReader reader = database.CreateCommand("SELECT * FROM screen", _connection).ExecuteReader())
+            using (IDataReader reader = database.CreateCommand("SELECT * FROM \"Screen\"", _connection).ExecuteReader())
             {
                 while (reader.Read())
                 {
