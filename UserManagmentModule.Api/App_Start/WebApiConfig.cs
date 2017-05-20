@@ -13,8 +13,8 @@ namespace UserManagmentModule.Api.App_Start
     {
         public static void Register(HttpConfiguration config)
         {
-         
 
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
 
