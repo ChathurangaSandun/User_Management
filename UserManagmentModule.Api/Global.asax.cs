@@ -22,9 +22,12 @@ namespace UserManagmentModule.Api
 
         }
 
-        protected void Application_BeginRequest(object sender, EventArgs e)
+        protected void Application_BeginRequest()
         {
-
+            if (Request.Headers.AllKeys.Contains("Origin") && Request.HttpMethod == "OPTIONS")
+            {
+                Response.Flush();
+            }
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
