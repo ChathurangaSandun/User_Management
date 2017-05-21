@@ -27,9 +27,9 @@ namespace UserManagmentModule.DatabaseConnection.Handler
                 {
                     return ConfigurationManager.ConnectionStrings[ConnectionStringName].ConnectionString;
                 }
-                catch (Exception excep)
+                catch (Exception exc)
                 {
-                    throw new Exception("Connection string " + ConnectionStringName + " was not found in web.config. " + excep.Message);
+                    throw exc; 
                 }
             }
         }
