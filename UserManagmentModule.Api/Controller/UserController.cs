@@ -13,8 +13,11 @@ namespace UserManagmentModule.Api.Controller
     {
         [Route("api/User/CheckLogin")]
         [HttpPost]
-        public bool CheckLogin([FromBody] UserLoginDTO userLogin)
+       
+        public bool CheckLogin( [FromBody] UserLoginDTO userLogin)
         {
+
+
             if (userLogin == null)
             {
                 return false;
@@ -22,7 +25,8 @@ namespace UserManagmentModule.Api.Controller
             }
             else
             {
-                return UserManager.CheckLogin(userLogin);
+                bool canLogin = UserManager.CheckLogin(userLogin);
+                return canLogin;
 
             }
 
