@@ -33,17 +33,6 @@ namespace UserManagmentModule.DatabaseConnection.DBClasses
             command.CommandType = CommandType.Text;
             return command;
         }
-        public override IDbCommand CreateStoredProcCommand(string procName, IDbConnection connection)
-        {
-            OracleCommand command = (OracleCommand)CreateCommand();
-            command.CommandText = procName;
-            command.Connection = (OracleConnection)connection;
-            command.CommandType = CommandType.StoredProcedure;
-            return command;
-        }
-        public override IDataParameter CreateParameter(string parameterName, object parameterValue)
-        {
-            return new OracleParameter(parameterName, parameterValue);
-        }
+      
     }
 }

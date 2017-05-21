@@ -33,17 +33,6 @@ namespace UserManagmentModule.DatabaseConnection.DBClasses
             command.CommandType = CommandType.Text;
             return command;
         }
-        public override IDbCommand CreateStoredProcCommand(string procName, IDbConnection connection)
-        {
-            NpgsqlCommand command = (NpgsqlCommand)CreateCommand();
-            command.CommandText = procName;
-            command.Connection = (NpgsqlConnection)connection;
-            command.CommandType = CommandType.StoredProcedure;
-            return command;
-        }
-        public override IDataParameter CreateParameter(string parameterName, object parameterValue)
-        {
-            return new NpgsqlParameter(parameterName, parameterValue);
-        }
+       
     }
 }
